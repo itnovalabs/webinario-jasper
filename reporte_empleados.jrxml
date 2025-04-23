@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 8.1.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte_empleados" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ced95029-b569-4027-895c-af2843a4e088">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Empleados Data"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="data_empleados"/>
 	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true"/>
 	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
 	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
@@ -169,6 +169,9 @@
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<frame>
 				<reportElement mode="Opaque" x="0" y="0" width="555" height="20" backcolor="#E6DAC3" uuid="99650231-9fa6-4f30-8ea1-9d7133f7b709"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+				</box>
 				<textField pattern="#,##0.###">
 					<reportElement x="419" y="0" width="136" height="20" uuid="cd155ac4-2e70-49df-b46d-2593e6df93ec"/>
 					<box rightPadding="5"/>
