@@ -19,6 +19,9 @@
 	<field name="nombre" class="java.lang.String"/>
 	<field name="departamento" class="java.lang.String"/>
 	<field name="salario" class="java.lang.Integer"/>
+	<variable name="salario1" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{salario}]]></variableExpression>
+	</variable>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -160,6 +163,15 @@
 		</band>
 	</pageFooter>
 	<summary>
-		<band splitType="Stretch"/>
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="415" y="0" width="136" height="20" uuid="cd155ac4-2e70-49df-b46d-2593e6df93ec"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{salario1}]]></textFieldExpression>
+			</textField>
+		</band>
 	</summary>
 </jasperReport>
