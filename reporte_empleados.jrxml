@@ -115,10 +115,12 @@
 					</reportElement>
 					<textFieldExpression><![CDATA[$F{departamento}]]></textFieldExpression>
 				</textField>
-				<textField textAdjust="StretchHeight">
+				<textField textAdjust="StretchHeight" pattern="#,##0.###">
 					<reportElement style="Detail" x="414" y="0" width="138" height="15" uuid="5b951b0f-2a0a-46ef-9d49-58a25be8137f">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="24bd8017-6f26-4c82-93d7-df361272de37"/>
 					</reportElement>
+					<box rightPadding="5"/>
+					<textElement textAlignment="Right"/>
 					<textFieldExpression><![CDATA[$F{salario}]]></textFieldExpression>
 				</textField>
 			</frame>
@@ -165,13 +167,22 @@
 	<summary>
 		<band height="20" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<textField>
-				<reportElement x="415" y="0" width="136" height="20" uuid="cd155ac4-2e70-49df-b46d-2593e6df93ec"/>
-				<textElement verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$V{salario1}]]></textFieldExpression>
-			</textField>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="20" backcolor="#E6DAC3" uuid="99650231-9fa6-4f30-8ea1-9d7133f7b709"/>
+				<textField pattern="#,##0.###">
+					<reportElement x="419" y="0" width="136" height="20" uuid="cd155ac4-2e70-49df-b46d-2593e6df93ec"/>
+					<box rightPadding="5"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{salario1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="138" height="20" uuid="f22b47ef-7968-459c-a80c-c804eec73c0e"/>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[TOTAL SALARIOS:]]></text>
+				</staticText>
+			</frame>
 		</band>
 	</summary>
 </jasperReport>
